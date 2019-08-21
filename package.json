@@ -1,0 +1,15 @@
+{
+  "name": "desafio_stone",
+  "version": "1.0.0",
+  "description": "desafio stone",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "isleyne alves",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.4.1"
+  }
+}
