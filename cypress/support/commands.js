@@ -1,11 +1,11 @@
-Cypress.Commands.add('Auth', () => {
+Cypress.Commands.add('Auth', (username, password) => {
   cy.request({
     method: 'POST',
     url: 'https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token',
     form: true,
     body: {
-      username: 'isleynealves@gmail.com',
-      password: '123stone',
+      username: username,
+      password: password,
       grant_type: 'password',
       client_id: 'admin-cli'
     }
@@ -25,3 +25,8 @@ Cypress.Commands.add('Accounts', (access_token) => {
    return response.body
  })
 })
+
+// Cypress.Commands.add('FormatedDate', () => {
+//     const now = new Date()
+//     return {now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}
+// })
